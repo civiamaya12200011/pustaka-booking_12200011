@@ -1,14 +1,28 @@
-<html>
-     <head>
-         <title>perpustakaan login</title>
-     </head>
-     <body>
+<?=$this->extend('dasar_tampilan');?>
+<?=$this->section('isiweb')?>
+<form method="post" action="<?=base_url('/login')?>">
+    <div class="container col-md-3">
+        <div class="card mt-5">
+            <div class="card-header">
+                <h3 class="card-title">login</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-floating">
+                    <input id="txtEmail" class="form-control"
+                            placeholder="Email"
+                            type="text" name="email" />
+                    <label for="txtEmail" >Email</label>
+                </div>
+                <div class="form-floating">
+                    <input id="txtPass" class="form-control"
+                            placeholder="Password"
+                            type="password" name="sandi" />
+                    <label for='txtPass' >kata sandi</label>
+                </div>
 
-         <h1>selamat datang di sistem informasi perpustakaan</h1>
-         <p>
-             ini adalah layanan perpustakaan digital masa kini
-             <a href="<?=base_url('/daftar-member')?>">klik daftar</a> untuk mendaftar menjadi member
-         </p>
-
-     </body>
-</html>
+                <button class="btn btn-primary" >login</button>
+            </div>
+        </div>
+    </div>
+</form>
+<?=$this->endsection()?>
