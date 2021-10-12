@@ -14,10 +14,10 @@ class SelamatDatang extends basecontroller {
     }
 
     public function beranda_login(){
-        return view ('halaman/login');
+        return view('halaman/login');
     }
 
     public function daftar_member(){
-        return view ('halaman/daftar_member');
+        return view('halaman/daftar_member');
     }
 }
