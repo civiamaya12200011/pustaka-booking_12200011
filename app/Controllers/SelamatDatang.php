@@ -14,10 +14,22 @@ class SelamatDatang extends basecontroller {
     }
 
     public function beranda_login(){
-        return view('halaman/login');
+        return view('halaman/login',[
+            'vl' => $this->session->getFlashData('validator'),
+            'email' => $this->session->get('email'),
+            'sandi' => $this->session->get('sandi'),
+            'error' => $this->session->getFlashData('error')
+        ]);
     }
 
     public function daftar_member(){
         return view('halaman/daftar_member');
+    }
+
+    public function hal_beranda(){
+        return view('halaman/beranda', [
+            'email' => $this->session->get('email'),
+            'sandi' => $this->session->get('sandi')
+        ]);
     }
 }
