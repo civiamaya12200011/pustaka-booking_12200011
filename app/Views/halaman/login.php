@@ -30,7 +30,7 @@ $vl = $vl ?? services::validation();
                 <?php if($vl == null ? '':$vl->getError('email')){ ?>
                     <div class="alert alert-danger">
                     <?php
-                        echo ($vl == null ? '' :$vl->getError('email'))
+                        echo ($vl == null ? '':$vl->getError('email'))
                     ?>
                     </div>
                 <?php } ?>
@@ -46,7 +46,7 @@ $vl = $vl ?? services::validation();
                 <?php if($vl == null ? '':$vl->getError('sandi')){ ?>
                     <div class="alert alert-danger">
                     <?php
-                    echo ($vl == null ? '' :$vl->getError('sandi'))
+                    echo ($vl == null ? '':$vl->getError('sandi'))
                     ?>
                 </div>
                 <?php } ?>
